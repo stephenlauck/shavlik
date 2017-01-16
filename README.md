@@ -1,4 +1,4 @@
 # shavlik
 
-TODO: Enter the cookbook description here.
+Chef cookbook to demonstrate Shavlik patch strategy using Chef Compliance
 

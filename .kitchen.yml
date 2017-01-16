@@ -13,14 +13,27 @@ verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-16.04
-  - name: centos-7.2
+  - name: windows-2012r2
+    driver:
+      box: opentable/win-2012r2-standard-amd64-nocm
+      gui: true
+    transport:
+      name: winrm
+      elevated: true
 
 suites:
-  - name: default
+  - name: shavlik
     run_list:
       - recipe[shavlik::default]
     verifier:
       inspec_tests:
-        - test/smoke/default
+        - https://github.com/dev-sec/windows-patch-benchmark
+    attributes:
+
+  - name: unpatched
+    run_list:
+      - recipe[shavlik::default]
+    verifier:
+      inspec_tests:
+        - https://github.com/dev-sec/windows-patch-benchmark
     attributes:

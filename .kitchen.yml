@@ -24,16 +24,16 @@ platforms:
 suites:
   - name: shavlik
     run_list:
-      - recipe[shavlik::default]
+      - recipe[shavlik::server]
     verifier:
       inspec_tests:
         - https://github.com/dev-sec/windows-patch-benchmark
     attributes:
 
-  - name: unpatched
-    run_list:
-      - recipe[shavlik::default]
-    verifier:
-      inspec_tests:
-        - https://github.com/dev-sec/windows-patch-benchmark
-    attributes:
+#  - name: unpatched
+#    run_list:
+#      - recipe[shavlik::default]
+#    verifier:
+#      inspec_tests:
+#        - https://github.com/dev-sec/windows-patch-benchmark
+#    attributes:

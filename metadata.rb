@@ -6,6 +6,10 @@ description 'Installs/Configures shavlik'
 long_description 'Installs/Configures shavlik'
 version '0.1.0'
 depends 'sql_server'
+depends 'hostsfile'
+depends 'ms_dotnet'
+depends 'windows'
+depends 'chef-server'
 depends 'powershell'
 # The `issues_url` points to the location where issues for this cookbook are
 # tracked.  A `View Issues` link will be displayed on this cookbook's page when
